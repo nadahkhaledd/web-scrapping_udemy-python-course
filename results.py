@@ -17,9 +17,9 @@ print(len(links))
 for item in links:
     name = item.find('a').text
     href = item.find('a').attrs['href']
+    summary = item.find('p').text
 
     if name and href:
-
-        linksList.append({'name': name, 'href': href})
-        print(name, '\t', href)
+        linksList.append({'name': name, 'href': href, 'summary': summary})
+        print('\n', name, '\t', href, '\n', summary)
 
